@@ -4,7 +4,7 @@ import discord
 import asyncio
 from keep_alive import keep_alive
 
-TOKEN = os.environ['TOKEN']
+from tokencito import TOKEN
 
 intents = discord.Intents.all()
 client = commands.Bot(command_prefix='.', intents=intents)
