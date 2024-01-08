@@ -28,6 +28,7 @@ async def listhelp(ctx):
     )
     embed.set_footer(text="Code made and hosted by LuisaRLZ")
 
+    print(f"listhelp command used by: {ctx.author.name}")
     await ctx.send(embed=embed)
 
 @client.command()
@@ -48,6 +49,8 @@ async def list(ctx):
     )
 
     # Send the initial message with the list
+    print(original_names)
+    print(f"list command used by: {ctx.author.name}")
     msg = await ctx.send(embed=embed)
 
     # Add the emoji to the message (changed to 🖐️ and ❌)
@@ -95,6 +98,8 @@ async def list2(ctx):
     embed.add_field(name="Members:", value='\n'.join(memids), inline=False)
     embed.add_field(name=" ", value="**----DROPS----**", inline=False)
 
+    print(memids)
+    print(f"list2 command used by: {ctx.author.name}")
     await ctx.send(embed=embed)
 
 @client.command(name='invite', aliases=['inviteme','invitebot'])
@@ -119,6 +124,7 @@ async def invite(ctx):
         text=
         "If you've got any doubt or suggestion on this bot, please message me @luisarlz"
     )
+    print(f"invite command used by: {ctx.author.name}")
     await ctx.send(embed=invite)
 
 try:
