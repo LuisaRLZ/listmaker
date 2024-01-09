@@ -2,7 +2,7 @@ from discord.ext import commands
 import os
 import discord
 import asyncio
-from keep_alive import keep_alive
+#from keep_alive import keep_alive
 
 from tokencito import TOKEN
 
@@ -127,8 +127,8 @@ async def invite(ctx):
     print(f"invite command used by: {ctx.author.name}")
     await ctx.send(embed=invite)
 
-try:
-    keep_alive()
-    client.run(TOKEN)
-except Exception:
-    os.system('kill 1')
+#try:
+    #keep_alive()
+client.run(TOKEN)
+#except Exception:
+    #os.system('kill 1')
